@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+display: flex;
+justify-content:center ;
+align-items: center;
+position: relative;
+background: linear-gradient(to right , black , purple);
+}
+.body.active{
+  background: linear-gradient(to right, coral , purple);
+}
+.body.active1{
+  background: linear-gradient(to right ,#00BFFF ,#FF1493);
+}
+.body.active2{ 
+  background: linear-gradient(to right,#fff ,#333);
+}
+.body.add{
+  background-image: url('https://cdn.pixabay.com/photo/2020/05/30/21/30/illustration-5240508_960_720.jpg');
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.body.add1{
+  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/98/444/desktop-wallpaper-retro-big-sun-artist-backgrounds-retro-with-sun.jpg');
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.body.add2{
+ background-image: url('https://e0.pxfuel.com/wallpapers/897/330/desktop-wallpaper-lawn-meadow-forest-mountains-art.jpg');                
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+h1{
+color:#c6fd2d ;
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
+background-size: cover;
+position: relative;
+
+
+}
+.container {
+   margin-top: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container2{
+  margin-top: 100px;
+}
+.form-box.active {
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #342dfd;
+    display:none;
+    transition: transform 1.3s ease-in-out , background-color 3s linear ,scale 2s ease;
+}
+
+.form-box.active:hover{
+    transform:translateY(-50px);
+    border: 2px solid #c6fd2d;
+
+}
+.form-box {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    transition: transform 1.3s ease-in-out ,background-color 2s linear,scale 2s ease;
+    position: relative;
+    
+}
+
+.form-box:hover {
+   transform : translateY(-50px);
+}
+h1 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+h1:hover {
+    background:#0b0d15;
+    border-radius: 50px;
+}
+
+input ,
+select {
+width: 100%;
+padding: 12px;
+background-color: white;
+border-radius: 6px;
+border: none;
+outline: none;
+font-size: 16px;
+color: #333;
+margin-bottom: 20px; 
+
+}
+
+button{
+     width: 100%;
+    padding: 12px;
+    background:#c6fd2d ;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #342dfd ;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: 0.5s; 
+}
+
+button:hover{
+    background: #22c1c3 ;
+    width: 100px;
+    border: 3px solid white;
+    color: wheat;
+    border-radius: 40px;
+ 
+}
+
+p {
+    color: #3fd7fb;
+    margin-left: 10px;
+    text-align: center;
+
+}
+p a {
+ color :white;
+ margin-right: 10px;
+ text-decoration: none;;
+
+}
+p a:hover{
+    text-decoration:underline
+}
+.btnregister {
+    justify-content: space-between;
+    color: rgb(245, 245, 245);
+    margin-left: 20px;
+    padding-right:19px;
+    border-radius: 30px;
+    
+}
+.btnregister:hover {
+    text-decoration: underline;
+}
+h1 {
+  color: white;
+}
+.backdiv{
+  margin-left:50px;
+}
+.backgroundimg{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 150px;
+  background-color: transparent;
+  color: white;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.backgroundimg:hover{
+  border-radius: 25px;
+  background-color: #c6fd2d;
+  color: purple;
+  width: 150px;
+}
+
+.themediv{
+  margin-right:50px;
+}
+
+.theme{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 150px;
+  background-color: transparent;
+  color: white;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.theme:hover{
+  border-radius: 25px;
+  background-color: #c6fd2d;
+  color: #333;
+  width: 150px;
+}
+.form-box {
+  margin: 0 auto;
+  padding: 2em;
+  width: 300px;
+  background:#0b0d15 ;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.form-box::after,.form-box::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.form-box::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+.form-box.active::after,.form-box.active::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.form-box::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}

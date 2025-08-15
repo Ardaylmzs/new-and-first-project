@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+     <link rel="website icon" type="png" href="dice_images/logo4.png">
+    <title>AYILMAZ</title>
+</head>
+<body class="body" id="bodyId"><div class="themediv">
+    <button onclick="changingBackground(bodyId)" name="themeColor" class="theme" id="themeColor">change the theme color</button></div>   
+    <div class="container">
+    <div class="form-box active " id="login-form">
+        <form action="" method="">
+            <h1>Login</h1>
+            <input type="email" placeholder="e-mail" id="myText" name="email" required>
+            <input type="password" placeholder="password" name="password" required>
+            <a><button type="submit" id="myBtn" name="Login">Login</button></a>
+            <p>don't have an account ? <a href="#" onclick="showForm('login-form')">Register</a></p>
+        </form>
+        </div>
+    </div>
+    <div class="container2">
+    <div class="form-box " id="register-form">
+        <form action="" method="">
+            <h1>Register</h1>
+            <input type="text" placeholder="name and surname" name="name" required>
+            <input type="email" placeholder="e-mail" name="email" required>
+            <input type="password" placeholder="password" name="password" required>
+            <select name="select" id="roleUp">
+                <option value="">===ROLE===</option>
+                <option value="user">user</option>
+                <option value="admin">admin</option>
+            </select>
+            <button type="submit" name="register">Register</button>
+            <p>already have an account ?<a class="btnregister"  id="btnregister" href="#" onclick="showForm('register-form')">login</a></p>
+            <a class="checktext">I agree<input type="checkbox" class="checkbox" id="checkBox"></a>
+        </form>
+    </div>
+    </div>
+     <div class="backdiv"><button class="backgroundimg" id="addImg" onclick="addBackground()">add the background image</button></div>
+     <p id="subResponse"></p>
+    </body>
+    <script src="login.js"></script>
+</html>
