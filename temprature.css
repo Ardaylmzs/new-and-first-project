@@ -1,0 +1,63 @@
+html, body {
+  height: 100%;  
+  min-height: 100vh;
+  margin: 0;          
+  padding: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(93, 143, 243);
+    background: url("icons/tempconv\ \(2\).png") no-repeat center center fixed ;
+    background-size: cover;
+    background-position:center;
+
+}
+h1{
+    color:rgb(249, 75, 6) ;
+}
+form{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgb(65, 107, 125); 
+    margin-top: 100px;
+}
+#textBox{
+    width: 50%;
+    text-align: center;
+    font-size: 1.8em;
+    border: 2px solid hsl(219, 58%, 74%);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+label{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+button{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right , coral , yellow);
+    padding: 12px 15px;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(57, 67, 207);
+    border-radius: 10px;
+    border:none;
+    box-shadow: 2px 2px 5px rgb(240, 86, 3);
+    cursor: pointer;
+    transition:transform 1.2s ease,box-shadow 1.4s linear,color 1.2s ease ;  
+}
+button:hover{
+  transform:scale(1.25);
+  background: linear-gradient(to right ,hsl(19, 89%, 49%) , hsl(340, 90%, 50%));
+  box-shadow: 5px 5px 7px rgb(144, 10, 132);
+  color:aquamarine;
+}
+#result{
+    font-size: 1.6em;
+    font-weight: bolder;
+}
