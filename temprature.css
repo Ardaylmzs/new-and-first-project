@@ -7,7 +7,7 @@ html, body {
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(93, 143, 243);
-    background: url("icons/tempconv\ \(2\).png") no-repeat center center fixed ;
+    background: url("backtemp.jpg") no-repeat center center fixed ;
     background-size: cover;
     background-position:center;
 
