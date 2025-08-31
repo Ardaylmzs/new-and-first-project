@@ -5,46 +5,186 @@
     box-sizing: border-box;
     font-family: "Poppins", serif;
 }
+:root{
+    --text-color: #fff;
+    --main-color: #222327;
+}
+header{
+    position:fixed;
+    width:100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:transparent;
+    padding:28px 12%;
+    transition: all .50s ease;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo i {
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span {
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+
+.navbar{
+    display:flex;
+}
+.navbar a{
+  color: #fff;
+  text-decoration: none;
+}
+.navbar a:hover{
+   color:#e56427 ;
+}
+.navbar li{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin:0px 30px;
+    cursor: pointer;
+}
+.navbar li.a{
+   text-decoration: none;
+}
+.navbar li:hover{
+    color: var(--main-color);
+}
+.navbar li.active{
+    color: #e56427;
+}
+
+.main{
+    display:flex;
+    align-items: center;
+}
+.main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color:#0b0d15;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 1.3s ease-in-out
+}
+.main a:hover{
+ color:#e9c73d
+}
+
+.user{
+    display:flex;
+    align-items: center;
+}
+.user i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor:pointer;
+    z-index: 10001;
+    display: none;
+}
+@media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s; 
+    }
+    .navbar li{
+        padding: 5px 0;
+        margin:0px 20px;
+    }
+}
+@media (max-width:1090px){
+    #menu-icon{
+        display:block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 29vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar li{
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .navbar li:hover{
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+    .navbar li.active{
+        color: var(--text-color);
+    }
+    .navbar.open{
+        right: 2%;
+    }
+}
 
 body {
 display: flex;
 justify-content:center ;
 align-items: center;
 position: relative;
-background: linear-gradient(to right , black , purple);
+background: linear-gradient(to right , #333399,#FF00CC );
 }
 .body.active{
-  background: linear-gradient(to right, coral , purple);
+  background: linear-gradient(to right, rgb(16, 127, 179) , rgb(162, 40, 78));
 }
 .body.active1{
   background: linear-gradient(to right ,#00BFFF ,#FF1493);
 }
 .body.active2{ 
-  background: linear-gradient(to right,#fff ,#333);
+  background: linear-gradient(to left ,rgb(64, 59, 59) ,#565def);
 }
 .body.add{
-  background-image: url('https://cdn.pixabay.com/photo/2020/05/30/21/30/illustration-5240508_960_720.jpg');
+  background-image: url('backgroundnew2.jpg');
   background-position:center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
 .body.add1{
-  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/98/444/desktop-wallpaper-retro-big-sun-artist-backgrounds-retro-with-sun.jpg');
+  background-image: url('backgrounnew5.jpg');
   background-position:center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
 }
 .body.add2{
- background-image: url('https://e0.pxfuel.com/wallpapers/897/330/desktop-wallpaper-lawn-meadow-forest-mountains-art.jpg');                
+ background-image: url('backgroundnew9.jpg');                
   background-position:center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
 h1{
-color:#c6fd2d ;
 background-position: center;
 background-repeat: no-repeat;
 position: relative;
@@ -72,13 +212,11 @@ position: relative;
     border-radius: 10px;
     box-shadow: 0 0 10px #342dfd;
     display:none;
-    transition: transform 1.3s ease-in-out , background-color 3s linear ,scale 2s ease;
+    transition: transform 1.3s ease-in-out ;
 }
 
 .form-box.active:hover{
     transform:translateY(-50px);
-    border: 2px solid #c6fd2d;
-
 }
 .form-box {
     width: 100%;
@@ -87,23 +225,18 @@ position: relative;
     background-color: #fff;
     border-radius: 10px;
     display: flex;
-    transition: transform 1.3s ease-in-out ,background-color 2s linear,scale 2s ease;
     position: relative;
     
 }
 
 .form-box:hover {
-   transform : translateY(-50px);
+   transform : translateY(-3px);
 }
 h1 {
     font-size: 34px;
     text-align: center;
     margin-bottom: 20px;
     
-}
-h1:hover {
-    background:#0b0d15;
-    border-radius: 50px;
 }
 
 input ,
@@ -220,7 +353,7 @@ h1 {
   margin: 0 auto;
   padding: 2em;
   width: 300px;
-  background:#0b0d15 ;
+  background-color:#0b0d15 ;
   text-align: center;
   border-radius: 10px;
   position: relative;
@@ -230,6 +363,7 @@ h1 {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
+
 }
 
 .form-box::after,.form-box::before {
@@ -245,29 +379,26 @@ h1 {
   padding: 3px;
   border-radius: 10px;
   animation: 3s spin linear infinite;
+  
 }
 .form-box::before{
   filter: blur(1.5rem);
   opacity: 0.5;
 }
-.form-box.active::after,.form-box.active::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  padding: 3px;
-  border-radius: 10px;
-  animation: 3s spin linear infinite;
+.form-box::after{
+    z-index: -2;
 }
-.form-box::before{
+.form-box:hover::after{
+  animation: infinite;
   filter: blur(1.5rem);
   opacity: 0.5;
+  background: #0b0d15;
 }
+.form-box:hover::before{
+  filter: blur(1.5rem);
+  background: #0b0d15;
+}
+
 
 @keyframes spin{
   from{
